@@ -37,7 +37,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-blue-100">
+    <div className="flex justify-center items-center min-h-screen bg-sky-300">
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
 
@@ -50,7 +50,7 @@ const Register = () => {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-2 mb-4 border border-gray-900 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <label htmlFor="email" className="block mb-2 text-sm font-medium">Email</label>
@@ -62,7 +62,7 @@ const Register = () => {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-2 mb-4 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <label htmlFor="password" className="block mb-2 text-sm font-medium">Password</label>
@@ -74,27 +74,27 @@ const Register = () => {
           required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-2 mb-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-2 mb-2 border border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <button
           type="button"
           onClick={() => setShowPassword(!showPassword)}
-          className="text-blue-600 text-sm mb-4"
+          className="text-blue-600 italic font-bold text-sm mb-4 hover:underline"
         >
           {showPassword ? "Hide Password" : "Show Password"}
         </button>
 
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition duration-200"
+          className="w-full bg-blue-500 text-white p-2 rounded font-bold hover:bg-blue-600 transition duration-200"
         >
           Register
         </button>
 
         <p className="mt-4 text-center text-sm">
           Already Have An Account?{' '}
-          <Link to="/login" className="text-blue-600 hover:underline">Login</Link>
+          <Link to="/login" className="text-blue-600 font-bold italic hover:underline">Login</Link>
         </p>
       </form>
     </div>
